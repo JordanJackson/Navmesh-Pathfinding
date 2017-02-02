@@ -16,7 +16,8 @@ public class MoveToTarget : ActionNode
 
     public override void Reset()
     {
-        
+        targetVar = blackboard.GetGameObjectVar("Target");
+        target = targetVar.Value;
     }
 
     public override Status Update()
@@ -41,10 +42,7 @@ public class MoveToTarget : ActionNode
             return Status.Failure;
         }
         NavMeshPath path = new NavMeshPath();
-        if (path == null)
-        {
-            Debug.LogError("What the fuck is this?");
-        }
+
         bool success = agent.CalculatePath(target.transform.position, path);
         if (success)
         {
