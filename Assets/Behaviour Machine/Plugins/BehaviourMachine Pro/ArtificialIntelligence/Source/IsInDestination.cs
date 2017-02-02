@@ -24,7 +24,7 @@ namespace BehaviourMachine {
         public FloatVar pathEndThreshold;
 
         [System.NonSerialized]
-        NavMeshAgent m_Agent = null;
+        UnityEngine.AI.NavMeshAgent m_Agent = null;
 
         public override void Reset () {
             gameObject = this.self;
@@ -34,13 +34,13 @@ namespace BehaviourMachine {
         public override Status Update () {
             // Get the renderer
             if (m_Agent == null || m_Agent.gameObject != gameObject.Value)
-                m_Agent = gameObject.Value != null ? gameObject.Value.GetComponent<NavMeshAgent>() : null;
+                m_Agent = gameObject.Value != null ? gameObject.Value.GetComponent<UnityEngine.AI.NavMeshAgent>() : null;
 
             // Validate members?
             if  (m_Agent == null)
                 return Status.Error;
 
-            if (m_Agent.hasPath && m_Agent.pathStatus == NavMeshPathStatus.PathComplete && m_Agent.remainingDistance <= m_Agent.stoppingDistance + pathEndThreshold.Value)
+            if (m_Agent.hasPath && m_Agent.pathStatus == UnityEngine.AI.NavMeshPathStatus.PathComplete && m_Agent.remainingDistance <= m_Agent.stoppingDistance + pathEndThreshold.Value)
                 return Status.Success;
             else
                 return Status.Failure;

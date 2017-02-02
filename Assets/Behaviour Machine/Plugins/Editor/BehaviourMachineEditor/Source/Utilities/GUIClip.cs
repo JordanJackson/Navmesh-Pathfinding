@@ -20,7 +20,7 @@ namespace BehaviourMachineEditor {
         static System.Type type {
             get {
                 if (s_Type == null)
-                    s_Type = Types.GetType("UnityEngine.GUIClip", "UnityEngine.dll");
+                    s_Type = System.Reflection.Assembly.Load("UnityEngine.dll").GetType("UnityEngine.GUIClip");
                 return s_Type;
             }
         }

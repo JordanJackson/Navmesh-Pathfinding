@@ -21,20 +21,20 @@ namespace BehaviourMachine {
         /// The path status to test.
         /// </summary>
         [Tooltip("The path status to test.\nPathComplete: The path terminates at the destination.\nPathPartial: The path cannot reach the destination.\nPathInvalid: The path is invalid.")]
-        public NavMeshPathStatus pathStatus;
+        public UnityEngine.AI.NavMeshPathStatus pathStatus;
 
         [System.NonSerialized]
-        NavMeshAgent m_Agent = null;
+        UnityEngine.AI.NavMeshAgent m_Agent = null;
 
         public override void Reset () {
             gameObject = this.self;
-            pathStatus = NavMeshPathStatus.PathComplete;
+            pathStatus = UnityEngine.AI.NavMeshPathStatus.PathComplete;
         }
 
         public override Status Update () {
             // Get the renderer
             if (m_Agent == null || m_Agent.gameObject != gameObject.Value)
-                m_Agent = gameObject.Value != null ? gameObject.Value.GetComponent<NavMeshAgent>() : null;
+                m_Agent = gameObject.Value != null ? gameObject.Value.GetComponent<UnityEngine.AI.NavMeshAgent>() : null;
 
             // Validate members?
             if  (m_Agent == null)

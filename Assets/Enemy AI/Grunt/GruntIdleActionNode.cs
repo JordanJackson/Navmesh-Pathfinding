@@ -4,20 +4,20 @@ using System.Collections.Generic;
 using BehaviourMachine;
 using System;
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
 [NodeInfo(category ="Custom/", icon = "DefaultAsset", description = "Grunt Idle")]
 public class GruntIdleActionNode : ActionNode 
 {
 
     public FsmEvent wanderEvent;
 
-    NavMeshAgent navMeshAgent;
+    UnityEngine.AI.NavMeshAgent navMeshAgent;
 
     public override void Reset()
     {
         wanderEvent = new ConcreteFsmEvent();
 
-        navMeshAgent = owner.root.gameObject.GetComponent<NavMeshAgent>();
+        navMeshAgent = owner.root.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     public override void OnEnable()

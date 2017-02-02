@@ -25,7 +25,7 @@ namespace BehaviourMachine {
         /// Filter OffMeshLink by type.
         /// <summary>
         [Tooltip("Filter OffMeshLink by type")]
-        public OffMeshLinkType linkType;
+        public UnityEngine.AI.OffMeshLinkType linkType;
 
         /// <summary>
         /// Store the link end world position.
@@ -34,7 +34,7 @@ namespace BehaviourMachine {
         public Vector3Var storeEndPos;
 
         [System.NonSerialized]
-        NavMeshAgent m_Agent = null;
+        UnityEngine.AI.NavMeshAgent m_Agent = null;
 
         public override void Reset () {
             gameObject = this.self;
@@ -44,7 +44,7 @@ namespace BehaviourMachine {
         public override Status Update () {
              // Get the agent
             if (m_Agent == null || m_Agent.gameObject != gameObject.Value)
-                m_Agent = gameObject.Value != null ? gameObject.Value.GetComponent<NavMeshAgent>() : null;
+                m_Agent = gameObject.Value != null ? gameObject.Value.GetComponent<UnityEngine.AI.NavMeshAgent>() : null;
 
              // Validate members
             if (m_Agent == null)

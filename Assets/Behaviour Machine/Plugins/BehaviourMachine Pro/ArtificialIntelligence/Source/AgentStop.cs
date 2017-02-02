@@ -39,7 +39,7 @@ namespace BehaviourMachine {
 
     	public override Status Update () {
             // Get the agent
-            NavMeshAgent agent = gameObject.Value != null ? gameObject.Value.GetComponent<NavMeshAgent>() : null;
+            UnityEngine.AI.NavMeshAgent agent = gameObject.Value != null ? gameObject.Value.GetComponent<UnityEngine.AI.NavMeshAgent>() : null;
 
             // Validate members
             if (agent == null)

@@ -5,17 +5,17 @@ using System.Collections.Generic;
 public class Enemy : MonoBehaviour 
 {
 
-    NavMeshAgent agent;
+    UnityEngine.AI.NavMeshAgent agent;
 
     Player player;
 
-    NavMeshPath currentPath;
+    UnityEngine.AI.NavMeshPath currentPath;
 
     void Start()
     {
-        agent = this.GetComponent<NavMeshAgent>();
+        agent = this.GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = FindObjectOfType<Player>();
-        currentPath = new NavMeshPath();
+        currentPath = new UnityEngine.AI.NavMeshPath();
     }
 
     void Update()

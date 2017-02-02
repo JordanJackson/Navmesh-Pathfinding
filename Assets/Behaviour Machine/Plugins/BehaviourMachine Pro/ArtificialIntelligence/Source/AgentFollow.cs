@@ -35,7 +35,7 @@ namespace BehaviourMachine {
         public BoolVar resetPath;
 
         [System.NonSerialized]
-        NavMeshAgent m_GOAgent = null;
+        UnityEngine.AI.NavMeshAgent m_GOAgent = null;
 
         public override void Reset () {
             gameObject = this.self;
@@ -52,7 +52,7 @@ namespace BehaviourMachine {
         public override Status Update () {
             // Get the renderer
             if (m_GOAgent == null || m_GOAgent.gameObject != gameObject.Value)
-                m_GOAgent = gameObject.Value != null ? gameObject.Value.GetComponent<NavMeshAgent>() : null;
+                m_GOAgent = gameObject.Value != null ? gameObject.Value.GetComponent<UnityEngine.AI.NavMeshAgent>() : null;
 
             // Validate members?
             if  (m_GOAgent == null || target.Value == null) {
