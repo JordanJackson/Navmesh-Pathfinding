@@ -26,6 +26,7 @@ public class InRange : ConditionNode {
         {
             if (Vector3.Distance(owner.root.transform.position, targetVar.Value.transform.position) <= attackRange)
             {
+                
                 Debug.Log("Attack");
                 return Status.Success;
             }

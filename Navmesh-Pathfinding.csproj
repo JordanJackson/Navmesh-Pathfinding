@@ -637,10 +637,9 @@
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine\Wrapper\StateMachine.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine\Wrapper\UnityEventState.cs" />
     <Compile Include="Assets\Enemy AI\Grunt\DetectTarget.cs" />
-    <Compile Include="Assets\Enemy AI\Grunt\GruntIdleActionNode.cs" />
-    <Compile Include="Assets\Enemy AI\Grunt\GruntInRange.cs" />
-    <Compile Include="Assets\Enemy AI\Grunt\GruntWanderActionNode.cs" />
+    <Compile Include="Assets\Enemy AI\Grunt\InRange.cs" />
     <Compile Include="Assets\Enemy AI\Grunt\MoveToTarget.cs" />
+    <Compile Include="Assets\Enemy AI\Grunt\Wander.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\PathToTarget.cs" />
     <Compile Include="Assets\Player.cs" />
