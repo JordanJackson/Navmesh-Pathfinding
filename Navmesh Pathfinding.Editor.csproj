@@ -201,6 +201,7 @@
     <Compile Include="Assets\Behaviour Machine\Plugins\Editor\BehaviourMachineEditor\Wrapper\BehaviourTreeEditor.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\Editor\BehaviourMachineEditor\Wrapper\BlackboardEditor.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\Editor\BehaviourMachineEditor\Wrapper\MonoStateEditor.cs" />
+    <Compile Include="Assets\Editor\FieldOfViewEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Behaviour Machine\Plugins\BehaviourMachine\Readme!!!.txt" />

@@ -75,7 +75,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ApproachActionNode.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine Pro\ArtificialIntelligence\Source\AgentFollow.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine Pro\ArtificialIntelligence\Source\AgentResume.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine Pro\ArtificialIntelligence\Source\AgentStop.cs" />
@@ -636,13 +635,17 @@
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine\Wrapper\StateBehaviour.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine\Wrapper\StateMachine.cs" />
     <Compile Include="Assets\Behaviour Machine\Plugins\BehaviourMachine\Wrapper\UnityEventState.cs" />
-    <Compile Include="Assets\Enemy AI\Grunt\DetectTarget.cs" />
-    <Compile Include="Assets\Enemy AI\Grunt\InRange.cs" />
-    <Compile Include="Assets\Enemy AI\Grunt\MoveToTarget.cs" />
-    <Compile Include="Assets\Enemy AI\Grunt\Wander.cs" />
-    <Compile Include="Assets\Enemy.cs" />
-    <Compile Include="Assets\PathToTarget.cs" />
-    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\OverlordController.cs" />
+    <Compile Include="Assets\Scripts\ApproachActionNode.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\Grunt\DetectTarget.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\Grunt\InRange.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\Grunt\MoveToTarget.cs" />
+    <Compile Include="Assets\Scripts\Enemy AI\Grunt\Wander.cs" />
+    <Compile Include="Assets\Scripts\FieldOfView.cs" />
+    <Compile Include="Assets\Scripts\Grunt.cs" />
+    <Compile Include="Assets\Scripts\Gunner.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Behaviour Machine\Plugins\BehaviourMachine\Readme!!!.txt" />
