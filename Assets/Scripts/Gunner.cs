@@ -2,13 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Gunner : MonoBehaviour 
+public class Gunner : Unit 
 {
 
-
-    public void Attack()
+    public override void Attack()
     {
-        Debug.Log("Gunner Attacks");
+        //Debug.Log("Gunner Attacks");
     }
 
 }

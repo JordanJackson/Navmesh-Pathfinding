@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Grunt : MonoBehaviour 
+public class Grunt : Unit 
 {
 
-    public void Attack()
+    public override void Attack()
     {
-        Debug.Log("Grunt Attacks");
+        //Debug.Log("Grunt Attacks");
     }
 
 }
