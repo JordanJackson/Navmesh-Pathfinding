@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class OverlordController : MonoBehaviour 
 {
-    public Button[] unitButtons;
+    Button[] unitButtons;
     public Unit[] units;
     public int defaultSelection = 0;
     public int currentSelection;
@@ -16,10 +16,30 @@ public class OverlordController : MonoBehaviour
     // this should depend on intact buildings, game duration etc.
     public float manaRate;
 
+    Canvas canvas;
+    GameObject unitSelectPanel;
+    GameObject manaPanel;
+    public GameObject unitSelectPanelPrefab;
+    public GameObject manaPanelPrefab;
     // Overlord class should not manage UI
 
     void Awake()
     {
+        // get Canvas
+        canvas = FindObjectOfType<Canvas>();
+        if (canvas == null)
+        {
+            // consider spawning Canvas as well
+            Debug.LogError("No Canvas");
+        }
+        // instantiate unitSelectPanel
+        unitSelectPanel = Instantiate(unitSelectPanelPrefab, canvas.transform, false) as GameObject;
+        // get reference to buttons
+        unitButtons = unitSelectPanel.GetComponentsInChildren<Button>();
+        // instantiate manaPanel
+        manaPanel = Instantiate(manaPanelPrefab, canvas.transform, false) as GameObject;
+        // set reference to manaSlider
+        manaSlider = manaPanel.GetComponentInChildren<Slider>();
         manaSlider.minValue = 0;
         manaSlider.maxValue = maxMana;
         currentMana = maxMana * manaPortionStart;
